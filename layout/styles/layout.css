@@ -1229,7 +1229,7 @@ li[required="required"]:after {
 .what-we-do .col-md-4:last-of-type:after {
   content: none;
 }
-.course{
+#homepage .course{
   padding-bottom: 40px;
   position: relative;
 }
@@ -1248,7 +1248,7 @@ li[required="required"]:after {
 .course > a:hover .img_container{
   opacity: .7;
 }
-.course .more{
+#homepage .course .more{
   display: block;
   color: black;
   width: 100%;
@@ -1262,10 +1262,10 @@ li[required="required"]:after {
   -o-transition: all .3s;
   transition: all .3s;
 }
-.course:hover .more{
+#homepage .course:hover .more{
   border-bottom-color: #99ccff;
 }
-.course .more:hover{
+#homepage .course .more:hover{
   border-bottom-color: #99ccff;
 }
 #invoice{
