@@ -1226,6 +1226,9 @@ li[required="required"]:after {
   -o-transition: all .3s;
   transition: all .3s;
 }
+.course:hover .more{
+  border-bottom-color: #99ccff;
+}
 .course .more:hover{
   border-bottom-color: #99ccff;
 }
