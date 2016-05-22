@@ -78,13 +78,10 @@
     </div>
   </header>
 </div>
-<div id="path" class="custom_container">
-	<p>University Home > Buisness School > GSM > Executive Education > Short Courses > Accounting Fundamentals</p>
-</div>
 
 <!-- /HEADER -->
 
-<section id="about" class="content custom_container"> 
+<section id="homepage" class="content custom_container"> 
 	<div class="row " >
 		<div id="main-banner">
 			<div class="slides">
@@ -112,16 +109,59 @@
 				</dl>
 			</div>
 		</div> 
+		<hr>
 	</div>
-	<div class="custom_container row">
+	<div class="row what-we-do">
 		<div class="col-md-4">
-			
+			<div class="course">
+				<a href="#">
+					<figure class="img_container">
+						<img src="images/course1.jpg" class="responsive_img"></img>
+					</figure>
+				</a>
+				<div class="description">
+					<header>
+						<h2>Latest courses</h2>
+					</header>
+					<p>Connect confidently and create profitable relationships.</p>
+					<a href="#" class="more">LEARN MORE ...</a>
+				</div>
+				
+			</div>
 		</div>
 		<div class="col-md-4">
-			
+			<div class="course">
+				<a href="#">
+					<figure class="img_container">
+						<img src="images/course2.jpg" class="responsive_img"></img>
+					</figure>
+				</a>
+				<div class="description">
+					<header>
+						<h2>Latest courses</h2>
+					</header>
+					<p>We work in partnership with your organisationto design programmes that support your strategic objectives.</p>
+					<a href="#" class="more">LEARN MORE ...</a>
+				</div>
+				
+			</div>
 		</div>
 		<div class="col-md-4">
-			
+			<div class="course">
+				<a href="#">
+					<figure class="img_container">
+						<img src="images/course3.jpg" class="responsive_img"></img>
+					</figure>
+				</a>
+				<div class="description">
+					<header>
+						<h2>Latest courses</h2>
+					</header>
+					<p>Have your team enhance their skills and knowledge while building their ability to work cohesively together</p>
+					<a href="#" class="more">LEARN MORE ...</a>
+				</div>
+				
+			</div>
 		</div>
 	</div>
 </section>
@@ -194,6 +234,12 @@
 				}
 			}
 		});
+		var $sameHeightDivs = $('#homepage .col-md-4 .course');
+	    var maxHeight = 0;
+	    $sameHeightDivs.each(function() {	
+	        maxHeight = Math.max(maxHeight, $(this).outerHeight());
+	    });
+	    $sameHeightDivs.height(maxHeight + 'px');
 	});
 </script>
 </body>
