@@ -203,7 +203,7 @@
 		 			<li><a href="customized.html">Customized Programs</a></li>
 		 		</ul>
 		 	</div>
-		 	<div class="col-sm-6 contact_info clearfix">
+		 	<div class="col-sm-8 contact_info clearfix">
 		 		<ul class="contact_info fl_right">
 		 			<li>Email: info@ignitepd.com</li>
 		 			<li>Phone: 006000000</li>
@@ -239,7 +239,6 @@
 				position: "right",
 				pageSelector: '#page_wrapper'
 			}
-
 		});
 		$("#main-banner .slides").owlCarousel({
 			loop: true,
@@ -256,6 +255,12 @@
 				}
 			}
 		});
+		if(window.innerWidth > 768){
+			$('#main-banner, #main-banner figure').css('min-height',$(window).outerHeight() - ($('#header').height() + 40))
+		}else{
+			$('#main-banner, #main-banner figure').css('min-height', $('#main-benner figure img').outerHeight())
+		}
+		
 		var $sameHeightDivs = $('#homepage .col-md-4 .course');
 	    var maxHeight = 0;
 	    $sameHeightDivs.each(function() {	
