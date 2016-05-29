@@ -135,7 +135,7 @@
 				<a href="contact.html">Contact Us</a>
 			</div>
 			<div class="newsletter-btn">
-				<a href="newsletter">News Letter</a>
+				<a href="#" data-toggle="modal" data-target="#newsletter"> News Letter</a>
 			</div>
 			<div class="contact_info_side_box">
 				<p class="phonenumber"><strong>Phone:</strong> 0800 800 875</p>
@@ -144,11 +144,33 @@
 				<p>Or contact our PR team at <a href="mailto:publicity@ignitepd.com">publicity@ignitepd.com</a>.</p>
 				<p>Visit our website at <a href="https://www.ignitepd.com">https://www.ignitepd.com</a>.</p>
 			</div>
+			<!--modal-->
+			<div class="modal fade" id="newsletter" tabindex="-1" role="dialog" aria-labelledby="newsletter_modal">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title inline" id="newsletter_modal">Subscrive to our newsletter</h4>
+			      </div>
+			      <div class="modal-body">
+			     	<div>
+			     		<input type="emal" name="newslettermail" id="newslettermail" placeholder="Email address" class="col-xs-10" required="required"/>
+			     	</div>
+			      </div>
+			      <div class="modal-footer">
+			        <div class="newsletter-btn">
+						<button>Subscribe</button>
+					</div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!--end modal-->
 		</div>
 		<div class="col-md-9">
 			<h3 class="title">Contact Us</h3>
 			<p>Contact us to discuss your learning journey.</p>
-			<form action="">
+			<form action="" id="contactus_form">
 				<div class="form">
 					<div>
 						<h2 class="text-center">Contact Us</h2>
@@ -160,12 +182,31 @@
 					<div class="col-md-12"><input type="text" placeholder="Subject" id="subject" required style="width:100%;"></div>
 					<div class="col-md-12"><textarea type="text" placeholder="Your Message" id="message" cols="20" rows="10" required style="width:100%;"></textarea></div>
 					<div class="submit-btn clear">
-						<input type="submit" value="Submit" name="commit">
+						<input type="submit" value="Submit" name="commit" >
 					</div>
 				</div>
 			</form>
 		</div>
 	</div>
+   	<!-- Modal -->
+   	<div id="contact_modal" data-toggle="modal" data-target="#contect_form"></div>
+	<div class="modal fade" id="contect_form" tabindex="-1" role="dialog" aria-labelledby="contect_form_modal">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title inline" id="contect_form_modal">Registration</h4>
+	      </div>
+	      <div class="modal-body">
+	     	<h3>Registration Successful!</h3>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!--end modal-->
 </section>
 
 <!-- ################################################################################################ -->
@@ -220,6 +261,12 @@
 				pageSelector: '#page_wrapper'
 			}
 
+		});
+		$('#contactus_form').submit(function(e){
+			e.stopPropagation();
+			e.preventDefault();
+			$('#contact_modal').trigger('click');
+			
 		});
 	});
 </script>

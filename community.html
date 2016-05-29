@@ -97,9 +97,31 @@
 				<a href="contact.html">Contact Us</a>
 			</div>
 			<div class="newsletter-btn">
-				<a href="newsletter">News Letter</a>
+				<a href="#" data-toggle="modal" data-target="#newsletter"> News Letter</a>
 			</div>
 		</div>
+			<!--modal-->
+			<div class="modal fade" id="newsletter" tabindex="-1" role="dialog" aria-labelledby="newsletter_modal">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title inline" id="newsletter_modal">Subscrive to our newsletter</h4>
+			      </div>
+			      <div class="modal-body">
+			     	<div>
+			     		<input type="emal" name="newslettermail" id="newslettermail" placeholder="Email address" class="col-xs-10" required="required"/>
+			     	</div>
+			      </div>
+			      <div class="modal-footer">
+			        <div class="newsletter-btn">
+						<button>Subscribe</button>
+					</div>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			<!--end modal-->
 		<div class="col-md-9">
 		    <div id="social">
     		    <h3 class="title">
