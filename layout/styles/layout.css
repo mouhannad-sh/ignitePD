@@ -999,6 +999,10 @@ li[required="required"]:after {
 }
 .footer_navigation{
   column-count: 3;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  -ms-column-count: 3;
+  -o-column-count: 3;
 }
 .contact_info li,
 .footer_navigation li {
@@ -2462,6 +2466,10 @@ table {
   }
   .footer_navigation{
     column-count: 2;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    -ms-column-count: 2;
+    -o-column-count: 2;
     margin-bottom: 20px;
   }
   .footer_navigation li{
