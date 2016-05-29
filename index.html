@@ -193,7 +193,7 @@
     <footer id="footer" class="clearfix"> 
     <div class="container-fluid" >
 		 <div class="row">
-		 	<div class="col-sm-4">
+		 	<div class="col-md-4 col-sm-5">
 		 		<ul class="footer_navigation">
 		 			<li><a href="short-courses.html">Short Courses</a></li>
 		 			<li><a href="career.html">Careers</a></li>
@@ -203,7 +203,7 @@
 		 			<li><a href="customized.html">Customized Programs</a></li>
 		 		</ul>
 		 	</div>
-		 	<div class="col-sm-8 contact_info clearfix">
+		 		<div class="col-md-8 col-sm-7 contact_info clearfix">
 		 		<ul class="contact_info fl_right">
 		 			<li>Email: info@ignitepd.com</li>
 		 			<li>Phone: 006000000</li>
@@ -260,13 +260,16 @@
 		}else{
 			$('#main-banner, #main-banner figure').css('min-height', $('#main-benner figure img').outerHeight())
 		}
-		
-		var $sameHeightDivs = $('#homepage .col-md-4 .course');
-	    var maxHeight = 0;
-	    $sameHeightDivs.each(function() {	
-	        maxHeight = Math.max(maxHeight, $(this).outerHeight());
-	    });
-	    $sameHeightDivs.height(maxHeight + 'px');
+		if(window.innerWidth > 768){
+			$('#homepage .course img').load(function(){
+				var $sameHeightDivs = $('#homepage .col-md-4 .course');
+			    var maxHeight = 0;
+			    $sameHeightDivs.each(function() {	
+			        maxHeight = Math.max(maxHeight, $(this).height());
+			    });
+			    $sameHeightDivs.height(maxHeight + 'px');
+			});
+		}
 	});
 </script>
 </body>
